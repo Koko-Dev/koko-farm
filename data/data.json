@@ -1,0 +1,90 @@
+[
+  {
+	"id": 0,
+	"itemName": "Grapes",
+	"image": "🍇",
+	"from": "Italy",
+	"nutrients": "Copper, Vitamin K",
+	"quantity": "27 🍇",
+	"price": "4.50",
+	"organic": true,
+	"description": "Grapes are high in several important nutrients.  Grapes are an essential source of Vitamin K and Copper.  Copper is an essential mineral involved in energy production, while Vitamin K is vital for blood clotting and healthy bones.  Grapes also provide good amounts of B vitamins like thiamine, riboflavin, and B6.  Both thiamine and riboflain are needed for growth and development, while B6 is mainly required for protein metabolism."
+  },
+  {
+	"id": 1,
+	"itemName": "Tomatoes",
+	"image": "🍅",
+	"from": "Italy",
+	"nutrients": "Vitamin C, Vitamin A",
+	"quantity": "33 🍅",
+	"price": "4.49",
+	"organic": false,
+	"description": "A single tomato can provide about 40% of the daily recommended minimum of vitamin C. What's more, tomatoes supply vitamin A, which supports immunity, vision, and skin health; vitamin K, which is good for your bones; and potassium, a key nutrient for heart function, muscle contractions, and maintaining a healthy blood pressure and fluid balance"
+  },
+  {
+	"id": 2,
+	"itemName": "Lemons",
+	"image": "🍋",
+	"from": "Puerto Rico",
+	"nutrients": "B Vitamins, Vitamin C",
+	"quantity": "44 🍋",
+	"price": "3.99",
+	"organic": true,
+	"description": "Lemons contain about 31 grams of Vitamin C, which is nearly double the amount of Vitamin C needed in your daily diet. Along with boosting immunity, this burst of Vitamin C can reduce your risk of stroke and heart disease with regular consumption.\n\nLemon also contains a high level of dietary fiber, which can reduce risk factors for heart disease by lowering LDL or bad cholesterol. A surplus of cholesterol can lead to atherosclerosis, a hardening of the arteries within the heart."
+  },
+  {
+	"id": 3,
+	"itemName": "Mango",
+	"image": "🥭",
+	"from": "Puerto Rico",
+	"nutrients": "Vitamin C, Folate",
+	"quantity": "68 🥭",
+	"price": "6.12",
+	"organic": true,
+	"description": "One of its most impressive nutrient facts is that just 1 cup (165 grams) of fresh mango provides nearly 67% of the DV for vitamin C. This water-soluble vitamin aids your immune system, helps your body absorb iron, and promotes cell growth and repair.\n\nMango is also a good source of the minerals copper and folate, which are especially important nutrients during pregnancy, as they support healthy fetal growth and development."
+  },
+  {
+	"id": 4,
+	"itemName": "Sweet Potatoes",
+	"image": "🍠",
+	"from": "USA",
+	"nutrients": "Vitamin A, Vitamin B6",
+	"quantity": "84 🍠",
+	"price": "2.99",
+	"organic": true,
+	"description": "Sweet potato is a low-calorie, fat-free, nutrient-dense source of healthy carbohydrates, fiber, and many vitamins and minerals including vitamin A, potassium, and vitamin C.\n\nSweet potatoes are high in Vitamin B6, which can be great for the nerve system. It assists the body in efficiently absorbing carbohydrates and protein. Pyridoxine can also aid in the production of antibodies, which improves the immune system. It also assists in maintaining the levels of sodium and phosphorus within the body.  "
+  },
+  {
+	"id": "5",
+	"itemName": "Pineapple",
+	"image": "🍍",
+	"from": "Costa Rica",
+	"nutrients": "Manganese, Vitamin C",
+	"quantity": "95 🍍",
+	"price": "3.49",
+	"organic": true,
+	"description": "Pineapple contains a significant amount of vitamin C, a water-soluble antioxidant that fights cell damage.  One cup of raw pineapple chunks contains 2.6 mg of manganese, a mineral that’s important for developing strong bones and connective tissue.  "
+  },
+  {
+	"id": "6",
+	"itemName": "Cucumber",
+	"image": "🥒",
+	"from": "Spain",
+	"nutrients": "Potassium, Vitamin K",
+	"quantity": "53 🥒",
+	"price": "3.78",
+	"organic": true,
+	"description": "Cucumbers are good sources of phytonutrients (plant chemicals that have protective or disease preventive properties) such flavonoids, lignans and triterpenes, which have antioxidant, anti-inflammatory and anti-cancer benefits. The peel and seeds are the most nutrient-dense parts of the cucumber. They contain fiber and beta-carotene. Cucumber seeds are a good source of minerals, and contain calcium."
+  },
+  {
+	"id": "7",
+	"itemName": "Cayenne Pepper",
+	"image": "🌶",
+	"from": "USA",
+	"nutrients": "Magnesium, Vitamin B6",
+	"quantity": "72 🥒",
+	"price": "7.22",
+	"organic": true,
+	"description": "Cayenne pepper is an excellent source of many nutrients, including dietary fiber, Vitamin A, Vitamin C, potassium, Vitamin B6 and Vitamin E. It also contains significant amounts of calcium, iron, magnesium, riboflavin, manganese and phosphorus."
+  }
+]
