@@ -7,29 +7,34 @@ const path = require("path");
 const data = fs.readFileSync(`${__dirname}/data/data.json`, 'utf8');
 const parsed_data = JSON.parse(data);
 
-
-
 // Todo:  Create Server
 const server = http.createServer((req, res) => {
 	console.log(req.url);
 
 	const path_name = req.url;
 
+	// Store front
 	if (path_name === '/store' || path_name === '/') {
 		res.writeHead(200, {
 			"Content-type": "text/html"
 		});
 		res.end('<h1>Welcome to the Store!</h1>');
+
+		// Item Page
 	} else if (path_name === '/item') {
 		res.writeHead(200, {
 			"Content-type": "text/html"
 		});
 		res.end('<h1>This is your Item Page!</h1>')
+
+		// API
 	} else if (path_name === '/api') {
 		res.writeHead(200, {
 			"Content-Type": "application/json"
 		})
 		res.end(data);
+
+		// All other Incorrect URLs
 	} else {
 		res.writeHead(404, {
 			"Content-type": "text/html"
