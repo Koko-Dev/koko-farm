@@ -13,9 +13,13 @@ const store_template = fs.readFileSync(
 	'utf8'
 );
 const item__template = fs.readFileSync(
-	`${__dirname}/data/item.html`,
+	`${__dirname}/templates/item.html`,
 	'utf8'
 );
+/*const card_template = fs.readFileSync(
+	`${__dirname}/templates/card.html`,
+	'utf8'
+);*/
 
 // Todo:  Create Server
 const server = http.createServer((req, res) => {
@@ -28,14 +32,14 @@ const server = http.createServer((req, res) => {
 		res.writeHead(200, {
 			"Content-type": "text/html"
 		});
-		res.end('<h1>Welcome to the Store!</h1>');
+		res.end(store_template);
 
 		// Item Page
 	} else if (path_name === '/item') {
 		res.writeHead(200, {
 			"Content-type": "text/html"
 		});
-		res.end('<h1>This is your Item Page!</h1>')
+		res.end(item__template);
 
 		// API
 	} else if (path_name === '/api') {
