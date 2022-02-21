@@ -3,6 +3,13 @@ const http = require('http');
 const url = require('url');
 const path = require("path");
 
+// Read and Parse data.json file
+const data = fs.readFileSync(`${__dirname}/data/data.json`, 'utf8');
+const parsed_data = JSON.parse(data);
+
+
+
+// Todo:  Create Server
 const server = http.createServer((req, res) => {
 	console.log(req.url);
 
@@ -22,7 +29,7 @@ const server = http.createServer((req, res) => {
 		res.writeHead(200, {
 			"Content-Type": "application/json"
 		})
-		res.end('API')
+		res.end(data);
 	} else {
 		res.writeHead(404, {
 			"Content-type": "text/html"
@@ -33,6 +40,7 @@ const server = http.createServer((req, res) => {
 	// res.end('Hello from the server!');
 });
 
+// Todo:  Create Listener
 server.listen(8000, '127.0.0.1', () => {
 	console.log('Listening to requests from client on port 8000');
 })
