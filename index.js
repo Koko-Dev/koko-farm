@@ -18,6 +18,11 @@ const server = http.createServer((req, res) => {
 			"Content-type": "text/html"
 		});
 		res.end('<h1>This is your Item Page!</h1>')
+	} else if (path_name === '/api') {
+		res.writeHead(200, {
+			"Content-Type": "application/json"
+		})
+		res.end('API')
 	} else {
 		res.writeHead(404, {
 			"Content-type": "text/html"
