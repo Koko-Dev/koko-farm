@@ -14,6 +14,9 @@ const server = http.createServer((req, res) => {
 		res.end('Welcome to the Store!');
 	} else if (path_name === '/item') {
 		res.end('This is your Item Page!')
+	} else {
+		res.writeHead(404);
+		res.end('Page Not Found!');
 	}
 
 
