@@ -4,7 +4,7 @@
   "description": "A farm store using node and templating",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/Koko-Dev/koko-farm/issues"
   },
-  "homepage": "https://github.com/Koko-Dev/koko-farm#readme"
+  "homepage": "https://github.com/Koko-Dev/koko-farm#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
