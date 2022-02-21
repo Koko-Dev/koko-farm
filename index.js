@@ -3,9 +3,19 @@ const http = require('http');
 const url = require('url');
 const path = require("path");
 
-// Read and Parse data.json file
+// Todo: Read and Parse data.json file
 const data = fs.readFileSync(`${__dirname}/data/data.json`, 'utf8');
 const parsed_data = JSON.parse(data);
+
+// Todo: Read all templates
+const store_template = fs.readFileSync(
+	`${__dirname}/templates/store.html`,
+	'utf8'
+);
+const item__template = fs.readFileSync(
+	`${__dirname}/data/item.html`,
+	'utf8'
+);
 
 // Todo:  Create Server
 const server = http.createServer((req, res) => {
