@@ -1,0 +1,22 @@
+{
+  "name": "koko-farm",
+  "version": "1.0.0",
+  "description": "A farm store using node and templating",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Koko-Dev/koko-farm.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Koko-Dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Koko-Dev/koko-farm/issues"
+  },
+  "homepage": "https://github.com/Koko-Dev/koko-farm#readme"
+}
