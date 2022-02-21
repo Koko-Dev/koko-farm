@@ -2,6 +2,7 @@ const fs = require('fs');
 const http = require('http');
 const url = require('url');
 const path = require("path");
+const template_replacement = require('./handlers/template_replacement');
 
 // Todo: Read and Parse data.json file
 const data = fs.readFileSync(`${__dirname}/data/data.json`, 'utf8');
@@ -16,10 +17,12 @@ const item__template = fs.readFileSync(
 	`${__dirname}/templates/item.html`,
 	'utf8'
 );
-/*const card_template = fs.readFileSync(
+const card_template = fs.readFileSync(
 	`${__dirname}/templates/card.html`,
 	'utf8'
-);*/
+);
+
+
 
 // Todo:  Create Server
 const server = http.createServer((req, res) => {
@@ -30,9 +33,13 @@ const server = http.createServer((req, res) => {
 	// Store front
 	if (path_name === '/store' || path_name === '/') {
 		res.writeHead(200, {
-			"Content-type": "text/html"
-		});
-		res.end(store_template);
+			"Content-type": 'text/html'
+		})
+		const item_cards = parsed_data
+			.map(card_element => template_replacement(card_template, card_element));
+		const store_output = store_template
+			.replace('{%ITEM_CARDS%}', item_cards);
+		res.end(store_output);
 
 		// Item Page
 	} else if (path_name === '/item') {

@@ -1,5 +1,5 @@
 module.exports = (template, item) => {
-	let replacement = template.replace(/{%ITEM-NAME%}/g, item.itemName);
+	let replacement = template.replace(/{%ITEM_NAME%}/g, item.itemName);
 	replacement = replacement.replace(/{%IMAGE%}/g, item.image);
 	replacement = replacement.replace(/{%FROM%}/g, item.from);
 	replacement = replacement.replace(/{%NUTRIENTS%}/g, item.nutrients);
