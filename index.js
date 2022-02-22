@@ -61,10 +61,9 @@ const server = http.createServer((req, res) => {
 
 		// All other Incorrect URLs
 	} else if (path_name.includes('id')) {
-		const query = req.url.split('?')[1];
-		const myID = query.split("=")[1];
-		const item = parsed_data[myID];
-		// console.log(item);
+		const query = req.url.split('?')[1]; // id=3
+		const itemID = query.split("=")[1];  // 3
+		const item = parsed_data[itemID];
 		const output = template_replacement(item_template, item)
 		res.end(output);
 	} else {
@@ -73,8 +72,6 @@ const server = http.createServer((req, res) => {
 		});
 		res.end('<h1>Page Not Found!</h1>');
 	}
-
-	// res.end('Hello from the server!');
 });
 
 // Todo:  Create Listener
