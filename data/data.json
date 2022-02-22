@@ -19,7 +19,7 @@
 	"quantity": "3 🍅",
 	"price": "4.49",
 	"organic": false,
-	"description": "A single tomato can provide about 40% of the daily recommended minimum of vitamin C. What's more, tomatoes supply vitamin A, which supports immunity, vision, and skin health; vitamin K, which is good for your bones; and potassium, a key nutrient for heart function, muscle contractions, and maintaining a healthy blood pressure and fluid balance"
+	"description": "A single tomato can provide about 40% of the daily recommended minimum of vitamin C. What\u0027s more, tomatoes supply vitamin A, which supports immunity, vision, and skin health; vitamin K, which is good for your bones; and potassium, a key nutrient for heart function, muscle contractions, and maintaining a healthy blood pressure and fluid balance"
   },
   {
 	"id": 2,
@@ -61,7 +61,7 @@
 	"from": "Costa Rica",
 	"nutrients": "Manganese, Vitamin C",
 	"quantity": "2 🍍",
-	"price": "3.49",
+	"price": "9.99",
 	"organic": true,
 	"description": "Pineapple contains a significant amount of vitamin C, a water-soluble antioxidant that fights cell damage.  One cup of raw pineapple chunks contains 2.6 mg of manganese, a mineral that’s important for developing strong bones and connective tissue.  "
   },
