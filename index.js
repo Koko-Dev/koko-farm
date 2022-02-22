@@ -37,7 +37,8 @@ const server = http.createServer((req, res) => {
 			"Content-type": 'text/html'
 		})
 		const item_cards = parsed_data
-			.map(card_element => template_replacement(card_template, card_element));
+			.map(card_element => template_replacement(card_template, card_element))
+			.join('');
 		const store_output = store_template
 			.replace('{%ITEM_CARDS%}', item_cards);
 		res.end(store_output);
