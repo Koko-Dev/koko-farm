@@ -3,6 +3,8 @@ const http = require('http');
 const url = require('url');
 const path = require("path");
 const template_replacement = require('./handlers/template_replacement');
+const querystring = require('querystring');
+
 
 // Todo: Read and Parse data.json file
 const data = fs.readFileSync(`${__dirname}/data/data.json`, 'utf8');
@@ -13,7 +15,7 @@ const store_template = fs.readFileSync(
 	`${__dirname}/templates/store.html`,
 	'utf8'
 );
-const item__template = fs.readFileSync(
+const item_template = fs.readFileSync(
 	`${__dirname}/templates/item.html`,
 	'utf8'
 );
@@ -26,9 +28,10 @@ const card_template = fs.readFileSync(
 
 // Todo:  Create Server
 const server = http.createServer((req, res) => {
-	console.log(req.url);
-
+	console.log('I am req.url', req.url);
 	const path_name = req.url;
+
+
 
 	// Store front
 	if (path_name === '/store' || path_name === '/') {
@@ -46,7 +49,8 @@ const server = http.createServer((req, res) => {
 		res.writeHead(200, {
 			"Content-type": "text/html"
 		});
-		res.end(item__template);
+
+		res.end(item_template);
 
 		// API
 	} else if (path_name === '/api') {
@@ -56,6 +60,13 @@ const server = http.createServer((req, res) => {
 		res.end(data);
 
 		// All other Incorrect URLs
+	} else if (path_name.includes('id')) {
+		const query = req.url.split('?')[1];
+		const myID = query.split("=")[1];
+		const item = parsed_data[myID];
+		// console.log(item);
+		const output = template_replacement(item_template, item)
+		res.end(output);
 	} else {
 		res.writeHead(404, {
 			"Content-type": "text/html"
