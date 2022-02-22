@@ -57,13 +57,15 @@ const server = http.createServer((req, res) => {
 		})
 		res.end(data);
 
-		// All other Incorrect URLs
+		// All URLs with id in the query string
 	} else if (path_name.includes('id')) {
 		const query = req.url.split('?')[1]; // id=3
 		const itemID = query.split("=")[1];  // 3
 		const item = parsed_data[itemID];
 		const output = template_replacement(item_template, item);
 		res.end(output);
+
+		// All other Incorrect URLs
 	} else {
 		res.writeHead(404, {
 			"Content-type": "text/html"
