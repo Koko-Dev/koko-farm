@@ -25,12 +25,10 @@ const card_template = fs.readFileSync(
 );
 
 
-
 // Todo:  Create Server
 const server = http.createServer((req, res) => {
 	console.log('I am req.url', req.url);
 	const path_name = req.url;
-
 
 
 	// Store front
@@ -64,7 +62,7 @@ const server = http.createServer((req, res) => {
 		const query = req.url.split('?')[1]; // id=3
 		const itemID = query.split("=")[1];  // 3
 		const item = parsed_data[itemID];
-		const output = template_replacement(item_template, item)
+		const output = template_replacement(item_template, item);
 		res.end(output);
 	} else {
 		res.writeHead(404, {
