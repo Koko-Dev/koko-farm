@@ -3,7 +3,7 @@ const http = require('http');
 const url = require('url');
 const path = require("path");
 const template_replacement = require('./handlers/template_replacement');
-const querystring = require('querystring');
+const slugify = require('slugify');
 
 
 // Todo: Read and Parse data.json file
