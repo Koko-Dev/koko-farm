@@ -10,7 +10,31 @@ const slugify = require('slugify');
 const data = fs.readFileSync(`${__dirname}/data/data.json`, 'utf8');
 const parsed_data = JSON.parse(data);
 
-// Todo: Read all templates
+// todo:  Create an array of all the slugs
+const slugs = parsed_data.map(el => slugify(el.itemName, {lower: true}));
+/*  OUTPUT:
+		 [
+			 'grapes',
+			 'tomatoes',
+			 'lemons',
+			 'mango',
+			 'sweet-potatoes',
+			 'pineapple',
+			 'cucumber',
+			 'cayenne-pepper'
+		 ] */
+console.log(slugs);
+
+/*
+ FIXME: Replace item id with slug
+ TODO:
+  1. Add slug to each object in array,
+  2. change href attribute inside of card_template,
+  3. update the output inside of template_replacement
+  4. implement the path to the item page */
+
+ // Todo: Read all templates
+
 const store_template = fs.readFileSync(
 	`${__dirname}/templates/store.html`,
 	'utf8'
@@ -23,7 +47,6 @@ const card_template = fs.readFileSync(
 	`${__dirname}/templates/card.html`,
 	'utf8'
 );
-
 
 // Todo:  Create Server
 const server = http.createServer((req, res) => {
