@@ -7,8 +7,9 @@ const slugify = require('slugify');
 
 
 // Todo: Read and Parse data.json file
-const data = fs.readFileSync(`${__dirname}/data/data.json`, 'utf8');
-const parsed_data = JSON.parse(data);
+let data = fs.readFileSync(`${__dirname}/data/data.json`, 'utf8');
+let parsed_data = JSON.parse(data);
+
 
 // todo:  Create an array of all the slugs
 const slugs = parsed_data.map(el => slugify(el.itemName, {lower: true}));
@@ -23,7 +24,7 @@ const slugs = parsed_data.map(el => slugify(el.itemName, {lower: true}));
 			 'cucumber',
 			 'cayenne-pepper'
 		 ] */
-console.log(slugs);
+// console.log(slugs);
 
 /*
  FIXME: Replace item id with slug
@@ -34,6 +35,14 @@ console.log(slugs);
   4. implement the path to the item page */
 
  // Todo: Read all templates
+
+parsed_data.forEach((el, index) => {
+	el["slug"] = slugs[index];
+})
+
+
+
+
 
 const store_template = fs.readFileSync(
 	`${__dirname}/templates/store.html`,
@@ -83,10 +92,12 @@ const server = http.createServer((req, res) => {
 
 		// All URLs with id in the query string
 	} else if (path_name.includes('id')) {
-		const query = req.url.split('?')[1]; // id=3
-		const itemID = query.split("=")[1];  // 3
-		const item = parsed_data[itemID];
-		const output = template_replacement(item_template, item);
+		const query = req.url.split('?')[1]; // id=mango
+		const itemID = query.split("=")[1];  // mango
+		const item = parsed_data.filter(el => {
+			return el.slug === itemID;
+		})
+		let output = template_replacement(item_template, item[0]);
 		res.end(output);
 
 		// All other Incorrect URLs
