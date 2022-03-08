@@ -4,7 +4,8 @@
   "description": "A farm store using node and templating",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.15",
+    "onchange": "^7.1.0",
     "prettier": "2.5.1"
   }
 }
