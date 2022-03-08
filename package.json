@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Koko-Dev/koko-farm#readme",
   "dependencies": {
+    "express": "~4.17.3",
     "slugify": "~1.6.5"
   },
   "devDependencies": {
