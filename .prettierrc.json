@@ -1,4 +1,5 @@
 {
+  	"autoSave": true,
 	"arrowParens": "always",
 	"bracketSameLine": true,
 	"bracketSpacing": true,
