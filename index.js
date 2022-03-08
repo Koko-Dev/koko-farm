@@ -12,27 +12,6 @@ let parsed_data = JSON.parse(data);
 
 // todo:  Create an array of all the slugs
 const slugs = parsed_data.map(el => slugify(el.itemName, {lower: true}));
-/*  OUTPUT:
- [
- 'grapes',
- 'tomatoes',
- 'lemons',
- 'mango',
- 'sweet-potatoes',
- 'pineapple',
- 'cucumber',
- 'cayenne-pepper'
- ] */
-// console.log(slugs);
-
-/*
- FIXME: Replace item id with slug
- TODO:
- 1. Add slug to each object in array,
- 2. change href attribute inside of card_template,
- 3. update the output inside of template_replacement
- 4. implement the path to the item page */
-
 // Todo: Read all templates
 
 parsed_data.forEach((el, index) => {
