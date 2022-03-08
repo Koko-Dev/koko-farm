@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Koko-Dev/koko-farm#readme",
   "dependencies": {
-    "slugify": "^1.6.5"
+    "slugify": "~1.6.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
