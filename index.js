@@ -5,7 +5,6 @@ const path = require("path");
 const template_replacement = require('./handlers/template_replacement');
 const slugify = require('slugify');
 
-
 // Todo: Read and Parse data.json file
 let data = fs.readFileSync(`${__dirname}/data/data.json`, 'utf8');
 let parsed_data = JSON.parse(data);
