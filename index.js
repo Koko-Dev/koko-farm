@@ -37,7 +37,7 @@ const server = http.createServer((req, res) => {
 	const path_name = req.url;
 
 
-	// Storefront
+	// Todo: Storefront
 	if (path_name === '/store' || path_name === '/') {
 		res.writeHead(200, {
 			"Content-type": 'text/html'
